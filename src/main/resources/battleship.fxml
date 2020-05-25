@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane stylesheets="@battleship.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.battleship.networked.BattleshipController">
+    <left>
+        <VBox prefWidth="560" prefHeight="640">
+            <Label text="You:" styleClass="label-header-dark"/>
+            <GridPane fx:id="myOceanPane" styleClass="ocean-grid-pane" prefWidth="560" prefHeight="560">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefWidth="560" prefHeight="640">
+            <Label fx:id="enemyName" text="Enemy:" styleClass="label-header-dark"/>
+            <GridPane fx:id="enemyOceanPane" styleClass="ocean-grid-pane" prefWidth="560" prefHeight="560">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                    <ColumnConstraints percentWidth="10.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                    <RowConstraints percentHeight="10.0"/>
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+    </right>
+    <center>
+        <VBox>
+            <HBox prefHeight="80">
+                <Label text="Welcome" styleClass="label-header"/>
+            </HBox>
+        <AnchorPane prefWidth="160">
+            <children>
+                <TextArea fx:id="log" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"></TextArea>
+            </children>
+        </AnchorPane>
+        </VBox>
+    </center>
+    <bottom>
+        <AnchorPane>
+            <children>
+                <HBox prefHeight="80" spacing="16" AnchorPane.leftAnchor="10">
+                    <Button fx:id="btnAllocate" text="Allocate" onAction="#allocateClick" disable="true"/>
+                    <Button fx:id="btnPlay" text="Play" onAction="#playClick" disable="true"/>
+                </HBox>
+                <HBox prefHeight="80" spacing="16" AnchorPane.rightAnchor="10">
+                    <Button fx:id="btnShootAt" text="Shoot at ..." onAction="#askCoords" disable="true"/>
+                    <Button text="Cancel" onAction="#cancelClick"/>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

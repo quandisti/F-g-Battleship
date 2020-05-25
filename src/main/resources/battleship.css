@@ -1,0 +1,83 @@
+.root{
+    -fx-base: #3c3c3c;
+    -fx-color: #3c3c3c;
+    -fx-background: #3c3c3c;
+    -fx-background-color: #3c3c3c;
+    -fx-control-inner-background: #3c3c3c;
+
+    -fx-font-size: 13pt;
+    OCEAN_COLOR: #246EB9;
+    HIGHLIGHT_OCEAN_COLOR: #86BBD8;
+    HIT_COLOR: #FFD200;
+    SUNK_COLOR: #FF7100;
+}
+
+.button{
+    -fx-background-radius: 0;
+    -fx-border-color: derive(white, -20%);
+    -fx-border-width: 2;
+
+    -fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-border-color: white;
+    -fx-background-color: derive(-fx-background, 25%);
+    -fx-text-fill: white
+}
+
+.button:focused{
+    -fx-border-color: white;
+    -fx-text-fill: white;
+    -fx-background-color: derive(-fx-background, 25%);
+}
+.button:disabled{
+    -fx-text-fill: derive(white, -40%);
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-dark{
+    -fx-text-fill: derive(white, -20%);
+    -fx-opacity: 0.6;
+}
+
+.label-header{
+    -fx-font-size: 20pt;
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.label-header-dark{
+    -fx-font-size: 20pt;
+    -fx-text-fill: derive(white, -20%);
+    -fx-opacity: 1;
+}
+
+.text-area{
+    -fx-border-style: none;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.ocean-grid-pane{
+    -fx-background-color: OCEAN_COLOR;
+    -fx-grid-lines-visible: true;
+}
+
+.my-ocean-cell:hover{
+    -fx-background-color: HIGHLIGHT_OCEAN_COLOR;
+}
+
+.enemy-ocean-cell:hover{
+    -fx-background-color: HIGHLIGHT_OCEAN_COLOR;
+}
+
+.legend-image{
+    -fx-opacity: 0.6;
+}

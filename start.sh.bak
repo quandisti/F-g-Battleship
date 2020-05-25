@@ -1,0 +1,5 @@
+export JAVAFX_PATH="/home/alex/studying/2019-20/SoftwareConstruction/javafx-sdk-11.0.2/lib/"
+unzip -d . build/distributions/Baranov_183_HW5-1.0.zip Baranov_183_HW5-1.0/lib/Baranov_183_HW5-1.0.jar
+mv ./Baranov_183_HW5-1.0/lib/Baranov_183_HW5-1.0.jar ./Baranov_183_HW5.jar
+rm -rf ./Baranov_183_HW5-1.0
+java --module-path $JAVAFX_PATH --add-modules javafx.controls,javafx.fxml -jar ./Baranov_183_HW5.jar Server

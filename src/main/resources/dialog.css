@@ -1,0 +1,46 @@
+.root{
+    -fx-base: #3c3c3c;
+    -fx-color: #3c3c3c;
+    -fx-background: #3c3c3c;
+    -fx-background-color: #3c3c3c;
+    -fx-control-inner-background: #3c3c3c;
+
+    -fx-font-size: 13pt;
+}
+
+.dialog-pane .button{
+    -fx-background-radius: 0;
+    -fx-border-color: white;
+    -fx-border-width: 2;
+
+    -fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .header-panel .label{
+    -fx-text-fill: white;
+}
+
+.dialog-pane .label{
+    -fx-text-fill: derive(white, -20%);
+    -fx-opacity: 0.6;
+}
+
+.dialog-pane .button:hover{
+    -fx-background-color: derive(-fx-background, 25%);
+}
+
+.dialog-pane .button:disabled{
+    -fx-text-full: derive(white, -40%);
+}
+.dialog-pane .text-field{
+    -fx-border-color: derive(white, -20%);
+    -fx-border-width: 1;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.spinner{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
